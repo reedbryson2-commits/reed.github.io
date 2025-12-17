@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ski Joke Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(#0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      margin-top: 15px;
+    }
+
+    #joke {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      min-height: 60px;
+    }
+
+    a {
+      color: #b3e5ff;
+      display: inline-block;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>⛷️ Ski Joke Generator</h1>
+    <p>Click the button for a ski joke</p>
+
+    <button onclick="newJoke()">Drop a ski joke</button>
+
+    <div id="joke"></div>
+
+    <a href="index.html">← Back to Scratch Page</a>
+  </div>
+
+  <script>
+    const skiJokes = [
+      "Why do skiers make terrible secret keepers? Because they always spill the powder.",
+      "Why don’t skiers argue on the mountain? They just let things slide.",
+      "Skiing is just controlled falling.",
+      "Why do ski instructors love math? Because they’re great with angles.",
+      "I don’t chase happiness — I chase fresh tracks."
+    ];
+
+    function newJoke() {
+      const index = Math.floor(Math.random() * skiJokes.length);
+      document.getElementById("joke").textContent = skiJokes[index];
+    }
+  </script>
+
+</body>
+</html>
